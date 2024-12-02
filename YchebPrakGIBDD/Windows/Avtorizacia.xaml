@@ -170,7 +170,7 @@
         <!--Верхний бар-->
         <Rectangle Height="80" VerticalAlignment="Top"
                Fill="#e0a9af" Grid.Row="0" Grid.ColumnSpan="8"/>
-        <Image Source="\Images\gibdd_logo.png" Height="48" Width="48" Grid.Row="0" Grid.RowSpan="2"
+        <Image Source="\Images\gibdd_logo.png" Height="48" Width="48" Grid.Row="0"
            Grid.Column="0" Margin="20 0 0 0" HorizontalAlignment="Left" 
            VerticalAlignment="Center"/>
         <TextBlock Text="Авторизация" HorizontalAlignment="Center" 
