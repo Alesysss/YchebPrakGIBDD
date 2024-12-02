@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C75FD946-D020-47F7-B63D-35C551E20B37}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YchebPrakGIBDD</RootNamespace>
+    <AssemblyName>YchebPrakGIBDD</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.9.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Adres.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Avtomobil.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Code_Regiona.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Cvet_Mashini.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GIBBDmodel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GIBBDmodel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GIBBDmodel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GIBBDmodel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GIBBDmodel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Kategoria.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Mesto_raboti.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Privod.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Shtrafi.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Statys_Shtrafa.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Statys_VY.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sysdiagrams.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Tip_Dvigatelia.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Users.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Voditel.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Voditelskoe_ydostoverenie.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\VY_Istoria_Statysa.cs">
+      <DependentUpon>GIBBDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AdresWindow.xaml.cs">
+      <DependentUpon>AdresWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AvtomobilAdd.xaml.cs">
+      <DependentUpon>AvtomobilAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AvtomobilChange.xaml.cs">
+      <DependentUpon>AvtomobilChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AvtomobilWindow.xaml.cs">
+      <DependentUpon>AvtomobilWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Avtorizacia.xaml.cs">
+      <DependentUpon>Avtorizacia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CodRegionaWindow.xaml.cs">
+      <DependentUpon>CodRegionaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CvetWindow.xaml.cs">
+      <DependentUpon>CvetWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Glavnaia.xaml.cs">
+      <DependentUpon>Glavnaia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MestoRabotiWindow.xaml.cs">
+      <DependentUpon>MestoRabotiWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PrivodWindow.xaml.cs">
+      <DependentUpon>PrivodWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ShtrafiAdd.xaml.cs">
+      <DependentUpon>ShtrafiAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ShtrafiChange.xaml.cs">
+      <DependentUpon>ShtrafiChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ShtrafiWindow.xaml.cs">
+      <DependentUpon>ShtrafiWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TipDvigateliaWindow.xaml.cs">
+      <DependentUpon>TipDvigateliaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VoditelAdd.xaml.cs">
+      <DependentUpon>VoditelAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VoditelChange.xaml.cs">
+      <DependentUpon>VoditelChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VYAdd.xaml.cs">
+      <DependentUpon>VYAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VYChange.xaml.cs">
+      <DependentUpon>VYChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VYIstoriaStatysaAdd.xaml.cs">
+      <DependentUpon>VYIstoriaStatysaAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VYIstoriaStatysaChange.xaml.cs">
+      <DependentUpon>VYIstoriaStatysaChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VYIstoriaStatysaWindow.xaml.cs">
+      <DependentUpon>VYIstoriaStatysaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VYWindow.xaml.cs">
+      <DependentUpon>VYWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VoditelWindow.xaml.cs">
+      <DependentUpon>VoditelWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Entities\GIBBDmodel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GIBBDmodel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\GIBBDmodel.edmx.diagram">
+      <DependentUpon>GIBBDmodel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Windows\AdresWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AvtomobilAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AvtomobilChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AvtomobilWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Avtorizacia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CodRegionaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CvetWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Glavnaia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MestoRabotiWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PrivodWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ShtrafiAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ShtrafiChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ShtrafiWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\TipDvigateliaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VoditelAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VoditelChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VYAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VYChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VYIstoriaStatysaAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VYIstoriaStatysaChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VYIstoriaStatysaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VYWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VoditelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gibdd_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\GIBBDmodel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GIBBDmodel.Context.cs</LastGenOutput>
+      <DependentUpon>GIBBDmodel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entities\GIBBDmodel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GIBBDmodel.edmx</DependentUpon>
+      <LastGenOutput>GIBBDmodel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,236 @@
+﻿<Window x:Class="YchebPrakGIBDD.Windows.TipDvigateliaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YchebPrakGIBDD.Windows"
+        mc:Ignorable="d"
+        Title="Тип двигателя" 
+        Height="340" 
+        MaxHeight="370"
+        MinHeight="310"
+        Width="630"
+        MaxWidth="680"
+        MinWidth="580"
+        WindowStartupLocation="CenterScreen"
+        Background="#d1eefc"
+        Loaded="MainWindow_Loaded">
+    <Window.Resources>
+        <!-- Стиль для заголовков DataGrid -->
+        <Style TargetType="DataGridColumnHeader"
+               x:Key="DataGridStyle">
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+        </Style>
+        <!--Стиль для TextBox-->
+        <Style x:Key="TextBoxStyle" 
+               TargetType="TextBox">
+            <Setter Property="Height" 
+                    Value="36" />
+            <Setter Property="Width" 
+                    Value="300" />
+            <Setter Property="FontSize" 
+                    Value="16" />
+            <Setter Property="Padding" 
+                    Value="5" />
+            <Setter Property="Background" 
+                    Value="White" />
+            <Setter Property="BorderBrush" 
+                    Value="Gray" />
+            <Setter Property="BorderThickness" 
+                    Value="1" />
+            <Setter Property="Foreground" 
+                    Value="Black" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border CornerRadius="10"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--Стиль для Button-->
+        <Style x:Key="ButtonStyle" 
+               TargetType="Button">
+            <Setter Property="Width" 
+                    Value="200" />
+            <Setter Property="Height" 
+                    Value="36" />
+            <Setter Property="FontFamily" 
+                    Value="Montserrat" />
+            <Setter Property="FontSize" 
+                    Value="16" />
+            <Setter Property="FontWeight" 
+                    Value="Bold" />
+            <Setter Property="Background" 
+                    Value="#e0a9af" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center" 
+                                          Content="{TemplateBinding Content}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" 
+                         Value="True">
+                    <Setter Property="Background" 
+                            Value="#e3bfc3" />
+                </Trigger>
+                <Trigger Property="IsPressed" 
+                         Value="True">
+                    <Setter Property="Background" 
+                            Value="#c29197" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--Стиль для Button2-->
+        <Style x:Key="ButtonStyle2" 
+       TargetType="Button">
+            <Setter Property="Width" 
+            Value="120" />
+            <Setter Property="Height" 
+            Value="36" />
+            <Setter Property="FontFamily" 
+            Value="Montserrat" />
+            <Setter Property="FontSize" 
+            Value="16" />
+            <Setter Property="FontWeight" 
+            Value="Bold" />
+            <Setter Property="Background" 
+            Value="#e0a9af" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center" 
+                                  Content="{TemplateBinding Content}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" 
+                 Value="True">
+                    <Setter Property="Background" 
+                    Value="#e3bfc3" />
+                </Trigger>
+                <Trigger Property="IsPressed" 
+                 Value="True">
+                    <Setter Property="Background" 
+                    Value="#c29197" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <!--Верхний бар-->
+        <Rectangle Height="55"
+           VerticalAlignment="Top"
+           Fill="#e0a9af"
+           Grid.Row="0"
+           Grid.ColumnSpan="6"/>
+        <Image Source="\Images\gibdd_logo.png"
+       Height="48"
+       Width="48"
+       Grid.Row="0"
+       Grid.Column="0"
+       Margin="20 0 0 0"
+       HorizontalAlignment="Left"
+       VerticalAlignment="Center"/>
+        <TextBlock Text="Тип двигателя"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontFamily="Montserrat"
+               FontSize="30"
+               FontWeight="Bold"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"/>
+        <Button Click="ButtonNazad"
+            Content="Назад"
+            Style="{StaticResource ButtonStyle2}"
+            Height="auto"
+            Width="80"
+            Grid.Row="0"
+            Grid.Column="4"/>
+        <Button Click="ButtonGlavnaia"
+            Content="Главная"
+            Style="{StaticResource ButtonStyle2}"
+            Height="auto"
+            Width="80"
+            HorizontalAlignment="Right"
+            Margin="0, 0, 15, 0"
+            Grid.Row="0"
+            Grid.Column="5"/>
+        <!--Основная часть кода-->
+        <DataGrid x:Name="TipDvigateliaDG" 
+                  ColumnHeaderStyle="{StaticResource DataGridStyle}"
+                      AutoGenerateColumns="False" 
+                      Margin="30, 0, 30, 0"  
+                      VerticalAlignment="Stretch"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="6">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" 
+                                        Binding="{Binding ID}" 
+                                        Width="Auto" />
+                <DataGridTextColumn Header="Тип двигателя (EN)" 
+                                        Binding="{Binding Tip_EN}" 
+                                        Width="*" />
+                <DataGridTextColumn Header="Тип двигателя (RU)" 
+                                        Binding="{Binding Tip_RU}" 
+                                        Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!--Нижний бар-->
+        <Rectangle Fill="#e0a9af"
+            Grid.Row="4"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="6"/>
+
+        <TextBlock Text="Версия приложения: 1.0.0"
+                    FontSize="12"
+                    Margin="20, 7, 0.5, 0.5"
+                    FontFamily="Montserrat"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="6"/>
+        <TextBlock Text="Никогда не сообщайте свои данные третьим лицам"
+                    FontSize="12"
+                    Margin="20, 9 0.5, 7"
+                    FontFamily="Montserrat"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="6"/>
+    </Grid>
+</Window>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5980976da52f4b638de6b6336635fc15" Name="Diagram1">
+        <EntityTypeShape EntityType="GIBDDModel.Adres" Width="1.5" PointX="1.5" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Avtomobil" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Code_Regiona" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Cvet_Mashini" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Kategoria" Width="1.5" PointX="0.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Mesto_raboti" Width="1.5" PointX="1.5" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Privod" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Shtrafi" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Statys_VY" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Tip_Dvigatelia" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Users" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Voditel" Width="1.5" PointX="0.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.Voditelskoe_ydostoverenie" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GIBDDModel.VY_Istoria_Statysa" Width="1.5" PointX="5.25" PointY="16.875" IsExpanded="true" />
+        <AssociationConnector Association="GIBDDModel.FK_Voditel_Adres" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_Voditel_Adres1" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_Avtomobil_Code_Regiona" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_Avtomobil_Cvet_Mashini" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_Avtomobil_Privod" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_Avtomobil_Tip_Dvigatelia" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_Shtrafi_Avtomobil" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_Voditel_Mesto_raboti" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_Shtrafi_Voditelskoe_ydostoverenie" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_VY_Istoria_Statysa_Statys_VY" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_Voditelskoe_ydostoverenie_Voditel" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.FK_VY_Istoria_Statysa_Voditelskoe_ydostoverenie" ManuallyRouted="false" />
+        <AssociationConnector Association="GIBDDModel.Kategoria_Voditel" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GIBDDModel.Statys_Shtrafa" Width="1.5" PointX="7.5" PointY="0.75" />
+        <AssociationConnector Association="GIBDDModel.FK_Shtrafi_Statys_Shtrafa" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
